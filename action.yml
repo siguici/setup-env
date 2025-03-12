@@ -1,0 +1,23 @@
+name: Setup Environment
+description: 'Installs and updates system package managers and essential dependencies on Linux, macOS, and Windows.'
+author: 'siguici'
+branding:
+  icon: 'package'
+  color: 'blue'
+
+inputs:
+  packages:
+    description: 'List of packages to install (space-separated)'
+    required: false
+    default: ''
+
+runs:
+  using: 'composite'
+  steps:
+    - name: 📦 Install packages
+      shell: bash
+      env:
+        GITHUB_ENV: $GITHUB_ENV
+      run: |
+        chmod +x "${{ github.action_path }}/entrypoint.sh"
+        ${{ github.action_path }}/entrypoint.sh "${{ inputs.packages }}"
