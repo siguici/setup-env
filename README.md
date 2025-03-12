@@ -15,7 +15,6 @@ jobs:
         uses: siguici/setup-env@v1
         with:
           packages: "curl wget git"
-          upgrade: "true"
 ```
 
 ## 🛠️ Inputs
@@ -23,7 +22,6 @@ jobs:
 | Input      | Description                                  | Default      |
 |------------|--------------------------------------------|--------------|
 | `packages` | List of packages to install (space-separated) | `curl wget git` |
-| `upgrade`  | Upgrade package managers before installation | `true`       |
 
 ## 🖥️ Supported Platforms
 
