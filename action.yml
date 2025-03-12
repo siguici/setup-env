@@ -1,4 +1,4 @@
-name: Setup Environment
+name: Cross-Platform Environment Setup
 description: 'Installs and updates system package managers and essential dependencies on Linux, macOS, and Windows.'
 author: 'siguici'
 branding:
