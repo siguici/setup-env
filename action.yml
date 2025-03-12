@@ -20,4 +20,4 @@ runs:
         GITHUB_ENV: $GITHUB_ENV
       run: |
         chmod +x "${{ github.action_path }}/entrypoint.sh"
-        ${{ github.action_path }}/entrypoint.sh "${{ inputs.packages }}"
+        bash "${{ github.action_path }}/entrypoint.sh" "${{ inputs.packages }}"
